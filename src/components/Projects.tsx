@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
         'Multi-model support with version management',
         'Real-time monitoring and alerting'
       ],
-      githubUrl: 'https://github.com/jyothiram/cloud-native-ml-platform',
+      githubUrl: 'https://github.com/jyothiram266/mlops-project',
       category: 'cloud',
       status: 'completed'
     },
@@ -54,46 +54,27 @@ const Projects: React.FC = () => {
         'Security scanning and vulnerability assessment',
         'Blue-green deployment strategy'
       ],
-      githubUrl: 'https://github.com/jyothiram/devopsified-golang-app',
-      liveUrl: 'https://golang-app.jyothiram.dev',
+      githubUrl: 'https://github.com/jyothiram266/devops-projects/tree/master/go-web-app',
       category: 'devops',
       status: 'completed'
     },
     {
-      id: 'k8s-monitoring',
-      title: 'Kubernetes Monitoring Stack',
-      description: 'Complete observability solution with Prometheus, Grafana, and Loki for Kubernetes clusters.',
-      longDescription: 'Comprehensive monitoring and observability stack for Kubernetes environments. Features custom Prometheus configurations, Grafana dashboards for visualization, Loki for log aggregation, and AlertManager for intelligent alerting. The stack provides deep insights into cluster health, application performance, and resource utilization.',
-      technologies: ['Prometheus', 'Grafana', 'Loki', 'AlertManager', 'Kubernetes', 'Helm'],
-      features: [
-        'Custom Prometheus metrics and rules',
-        'Interactive Grafana dashboards',
-        'Centralized logging with Loki',
-        'Smart alerting with AlertManager',
-        'Multi-cluster monitoring support',
-        'Performance optimization insights'
-      ],
-      githubUrl: 'https://github.com/jyothiram/k8s-monitoring-stack',
-      category: 'monitoring',
-      status: 'completed'
-    },
-    {
       id: 'terraform-aws',
-      title: 'Terraform AWS Infrastructure',
+      title: 'Terraform Jenkins AWS Infrastructure',
       description: 'Infrastructure as Code templates for AWS with best practices and security configurations.',
       longDescription: 'Production-ready Terraform modules for AWS infrastructure provisioning. Includes VPC setup, EKS clusters, RDS databases, security groups, and IAM roles. All modules follow AWS Well-Architected Framework principles and include comprehensive documentation, testing, and validation.',
       technologies: ['Terraform', 'AWS', 'VPC', 'EKS', 'RDS', 'IAM'],
       features: [
-        'Modular Terraform configuration',
+        'Modular jenkins and Terraform configuration',
         'AWS Well-Architected compliance',
         'Multi-environment support',
         'Security best practices',
         'Cost optimization strategies',
         'Automated testing and validation'
       ],
-      githubUrl: 'https://github.com/jyothiram/terraform-aws-infrastructure',
+      githubUrl: 'https://github.com/jyothiram266/devops-projects/tree/master/Deploy-to-Kubernetes-Using-Jenkins',
       category: 'cloud',
-      status: 'in-progress'
+      status: 'completed'
     }
   ];
 

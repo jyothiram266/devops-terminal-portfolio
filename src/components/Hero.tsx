@@ -134,8 +134,8 @@ const Hero: React.FC = () => {
               <span className="text-accent ml-2 font-bold">15+</span>
             </div>
             <div className="bg-card/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-border">
-              <span className="text-muted-foreground">Certifications:</span>
-              <span className="text-terminal-success ml-2 font-bold">AWS + KodeKloud</span>
+              <span className="text-muted-foreground">Cloud:</span>
+              <span className="text-terminal-success ml-2 font-bold">AWS,GCP,Azure,DigitalOcean</span>
             </div>
           </motion.div>
         </motion.div>

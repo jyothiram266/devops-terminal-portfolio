@@ -36,13 +36,6 @@ const Contact: React.FC = () => {
       color: 'text-red-500'
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: '+91-8074728123',
-      href: 'tel:+918074728123',
-      color: 'text-green-500'
-    },
-    {
       icon: MapPin,
       label: 'Location',
       value: 'Karnataka, India',
@@ -56,28 +49,28 @@ const Contact: React.FC = () => {
       icon: Github,
       label: 'GitHub',
       value: '@jyothiram',
-      href: 'https://github.com/jyothiram',
+      href: 'https://github.com/jyothiram266',
       color: 'text-gray-500'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: '/in/jyothi-ram',
-      href: 'https://linkedin.com/in/jyothi-ram',
+      href: 'https://www.linkedin.com/in/jyothi-ram-7a4602197/',
       color: 'text-blue-600'
     },
     {
       icon: Globe,
       label: 'Portfolio',
       value: 'jyothiram.dev',
-      href: 'https://jyothiram.dev',
+      href: 'https://dev.jyothiram.me',
       color: 'text-purple-500'
     },
     {
       icon: MessageSquare,
       label: 'Hashnode',
       value: '@jyothiram',
-      href: 'https://hashnode.com/@jyothiram',
+      href: 'https://jyothiram.hashnode.dev/',
       color: 'text-blue-500'
     }
   ];

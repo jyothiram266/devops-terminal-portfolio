@@ -91,20 +91,19 @@ const Achievements: React.FC = () => {
       ]
     },
     {
-      id: 'team-leadership',
-      title: 'Cross-functional Team Leadership',
-      description: 'Led DevOps initiatives across multiple teams and projects',
-      category: 'recognition',
-      date: '2024-2025',
-      icon: Users,
-      color: 'text-indigo-500',
-      details: [
-        'Mentored junior developers in DevOps practices',
-        'Facilitated knowledge sharing sessions',
-        'Established DevOps best practices',
-        'Improved team productivity and collaboration'
-      ]
-    }
+  id: 'lift-scholarship',
+  title: 'LIFT Scholar 2025',
+  description: 'Awarded by the LiFUX Foundation for leadership and technical excellence',
+  category: 'recognition',
+  date: '2025',
+  icon: Users,
+  color: 'text-green-500',
+  details: [
+    'Selected as a LIFT Scholar among global applicants',
+    'Recognized for outstanding contributions in DevOps and open-source initiatives',
+    'Awarded by the LiFUX Foundation'
+  ]
+}
   ];
 
   const containerVariants = {
