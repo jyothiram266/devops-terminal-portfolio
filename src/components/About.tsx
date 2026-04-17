@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Code, Cloud, Zap, Users, Award } from 'lucide-react';
+import { GraduationCap, Code, Cloud, Zap, Users, Award, Shield } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
     { label: 'Years Experience', value: '2+', icon: Zap },
-    { label: 'Projects Completed', value: '15+', icon: Code },
-    { label: 'Cloud Deployments', value: '50+', icon: Cloud },
+    { label: 'Cloud Platforms', value: 'AWS & GCP', icon: Cloud },
+    { label: 'CI/CD Pipelines', value: '50+', icon: Code },
     { label: 'Team Collaborations', value: '10+', icon: Users }
   ];
 
@@ -15,25 +15,25 @@ const About: React.FC = () => {
       icon: GraduationCap,
       title: 'Education',
       description: 'BTech at National Institute of Technology Karnataka',
-      detail: 'Focusing on Computer Science with specialization in DevOps and Cloud Technologies'
+      detail: 'Final-year student (2022–2026), Surathkal, Karnataka'
     },
     {
       icon: Cloud,
       title: 'Cloud Expertise',
       description: 'AWS Certified Cloud Practitioner',
-      detail: 'Specialized in EKS, RDS, EC2, S3, and cloud-native architectures'
+      detail: 'Specialized in EKS, EC2, RDS, S3, GCP, and cloud-native architectures'
     },
     {
-      icon: Code,
-      title: 'Development',
-      description: 'Full-stack development with DevOps focus',
-      detail: 'React, Node.js, Python, Golang with emphasis on infrastructure automation'
+      icon: Shield,
+      title: 'DevSecOps',
+      description: 'Zero-trust CI/CD pipelines & security automation',
+      detail: 'SonarQube, Trivy, Snyk, OWASP ZAP, container security, RBAC & mTLS'
     },
     {
       icon: Award,
       title: 'Achievements',
-      description: 'Top 75 Coders - HackOn with Amazon',
-      detail: 'KodeKloud Engineer with 45,000 XP demonstrating practical DevOps skills'
+      description: 'LIFT Scholarship 2025 by The Linux Foundation',
+      detail: 'AWS Certified, KEDA Certified, recognized for open source excellence'
     }
   ];
 
@@ -72,7 +72,7 @@ const About: React.FC = () => {
               <span className="text-gradient">About Me</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Passionate Platform Engineer building scalable, resilient infrastructure that enables developers to ship faster and more reliably.
+              DevSecOps engineer building secure cloud-native infrastructure with zero-trust CI/CD pipelines and container security automation.
             </p>
           </motion.div>
 
@@ -90,17 +90,17 @@ const About: React.FC = () => {
                 <div className="mt-4 space-y-4 text-sm leading-relaxed">
                   <p className="text-foreground">
                     <span className="text-primary"># </span>
-                    Hello! I'm Jyothi Ram, a Platform Engineer passionate about creating infrastructure that just works.
+                    Hello! I'm Jyothi Ram, a DevSecOps Engineer passionate about secure cloud-native infrastructure.
                   </p>
                   <p className="text-muted-foreground">
-                    Currently pursuing my BTech at NIT Karnataka while working on cutting-edge DevOps projects that reduce deployment times, improve system reliability, and enable teams to focus on what they do best - building amazing products.
+                    Final-year BTech student at NIT Karnataka with 2+ years of hands-on experience building secure cloud-native infrastructure on AWS and GCP. I focus on zero-trust CI/CD pipelines, container security automation, and infrastructure hardening.
                   </p>
                   <p className="text-muted-foreground">
-                    My journey spans from implementing Kubernetes clusters and CI/CD pipelines to optimizing cloud costs and building monitoring solutions. I believe that great infrastructure should be invisible to developers but rock-solid in production.
+                    My expertise spans deploying AI/ML platforms with integrated security scanning, migrating container orchestration to Kubernetes, and establishing comprehensive monitoring with security-focused alerting for anomalous behaviour detection.
                   </p>
                   <div className="mt-4">
                     <span className="text-primary">$ </span>
-                    <span className="text-terminal-accent">Philosophy: "Automate everything, fail fast, learn faster"</span>
+                    <span className="text-terminal-accent">Philosophy: "Secure by default, automated everywhere, fail fast and learn faster"</span>
                   </div>
                 </div>
               </div>
@@ -129,19 +129,19 @@ const About: React.FC = () => {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center">
                     <span className="text-primary mr-2">▸</span>
-                    Cloud-Native Architecture Design
+                    Zero-Trust CI/CD Pipeline Architecture
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary mr-2">▸</span>
-                    Infrastructure as Code (Terraform, Helm)
+                    Container Security & Supply-Chain Integrity
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary mr-2">▸</span>
-                    Container Orchestration & Security
+                    Infrastructure as Code (Terraform, Helm, Ansible)
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary mr-2">▸</span>
-                    Observability & Performance Optimization
+                    AI/ML Platform Hardening & Runtime Isolation
                   </li>
                 </ul>
               </div>

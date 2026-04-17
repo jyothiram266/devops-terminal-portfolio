@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   );
 
   const { displayedText: subtitleText } = useTypingEffect(
-    "Platform Engineer & DevOps Specialist",
+    "DevSecOps Engineer & Platform Specialist",
     { speed: 50, delay: 2000 }
   );
 
@@ -130,12 +130,12 @@ const Hero: React.FC = () => {
               <span className="text-primary ml-2 font-bold">2+ Years</span>
             </div>
             <div className="bg-card/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-border">
-              <span className="text-muted-foreground">Projects:</span>
-              <span className="text-accent ml-2 font-bold">15+</span>
+              <span className="text-muted-foreground">Focus:</span>
+              <span className="text-accent ml-2 font-bold">Zero-Trust & Container Security</span>
             </div>
             <div className="bg-card/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-border">
               <span className="text-muted-foreground">Cloud:</span>
-              <span className="text-terminal-success ml-2 font-bold">AWS,GCP,Azure,DigitalOcean</span>
+              <span className="text-terminal-success ml-2 font-bold">AWS & GCP</span>
             </div>
           </motion.div>
         </motion.div>

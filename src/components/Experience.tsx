@@ -12,6 +12,7 @@ interface ExperienceItem {
   achievements: string[];
   technologies: string[];
   current?: boolean;
+  companyUrl?: string;
 }
 
 const Experience: React.FC = () => {
@@ -20,33 +21,18 @@ const Experience: React.FC = () => {
       id: 'fixpliance',
       company: 'FixplianceAI',
       role: 'Platform Engineer',
-      period: 'May 2025 - Present',
+      period: 'May 2025 - Mar 2026',
       location: 'Remote',
-      description: 'Leading platform engineering initiatives and infrastructure optimization for AI-powered compliance solutions.',
+      description: 'Engineered zero-trust CI/CD pipelines and led platform engineering initiatives for AI-powered compliance solutions.',
       achievements: [
-        'Implemented Traefik reverse proxy reducing latency by 20%',
-        'Automated GitHub Release Notes generation saving 10+ hours weekly',
-        'Orchestrated Docker Swarm deployments for microservices architecture',
-        'Built monitoring dashboards improving system observability'
+        'Engineered zero-trust CI/CD pipelines with GitHub Actions, integrating automated security scanning (SonarQube, Trivy) and code quality gates',
+        'Migrated container orchestration from Docker Swarm to K3s Kubernetes cluster, implementing GitOps workflows with ArgoCD, reducing deployment time by 75%',
+        'Developed cross-platform automation CLI tool using Go and Bash for one-click infrastructure provisioning on AWS/GCP with AES-256 encryption',
+        'Established comprehensive monitoring stack using Prometheus, Grafana, and Loki with security-focused alerting for anomalous container behaviour'
       ],
-      technologies: ['Traefik', 'Docker Swarm', 'GitHub Actions', 'Prometheus', 'Grafana'],
-      current: true
-    },
-    {
-      id: 'upwork',
-      company: 'UpWork',
-      role: 'FreeLancer - DevOps Engineer',
-      period: 'Feb 2024 - Present',
-      location: 'Remote',
-      description: 'Providing DevOps consulting services for various clients, specializing in cloud-native solutions and infrastructure automation.',
-      achievements: [
-        'Deployed PostgreSQL clusters using CloudNativePG operator',
-        'Managed Kubernetes workloads on Amazon EKS',
-        'Implemented GitOps workflows with ArgoCD',
-        'Optimized cloud costs by 30% through resource right-sizing',
-        'Set up comprehensive monitoring and alerting systems'
-      ],
-      technologies: ['Kubernetes', 'Amazon EKS', 'ArgoCD', 'PostgreSQL', 'Helm', 'Terraform']
+      technologies: ['GitHub Actions', 'K3s', 'ArgoCD', 'SonarQube', 'Trivy', 'Go', 'Prometheus', 'Grafana', 'Loki', 'Terraform'],
+      current: false,
+      companyUrl: 'https://www.linkedin.com/company/fixpliance-ai/posts/?feedView=all'
     },
     {
       id: 'aiplanet',
@@ -54,15 +40,32 @@ const Experience: React.FC = () => {
       role: 'DevOps Engineer',
       period: 'Aug 2024 - May 2025',
       location: 'Remote',
-      description: 'Built and maintained CI/CD pipelines and cloud infrastructure for AI and machine learning platforms.',
+      description: 'Built and maintained automated CI/CD pipelines and cloud infrastructure for AI and machine learning platforms with integrated security scanning.',
       achievements: [
-        'Developed GitHub Actions workflows reducing deployment time by 40%',
-        'Deployed applications on Amazon EKS with auto-scaling capabilities',
-        'Implemented monitoring stack using Prometheus, Grafana, and Loki',
-        'Managed Amazon RDS migrations with zero downtime',
-        'Created disaster recovery procedures improving system resilience'
+        'Built automated CI/CD pipelines using GitHub Actions with integrated testing, security scanning, and quality gates, reducing release time by 40%',
+        'Deployed production workloads on Amazon EKS with zero-trust network policies, RBAC, and Infrastructure as Code with Terraform',
+        'Implemented logging and monitoring solutions using Prometheus, Grafana, and Loki including security event dashboards',
+        'Executed complex Amazon RDS database migrations with zero-downtime strategy ensuring data integrity'
       ],
-      technologies: ['GitHub Actions', 'Amazon EKS', 'Prometheus', 'Grafana', 'Loki', 'Amazon RDS']
+      technologies: ['GitHub Actions', 'Amazon EKS', 'Kubernetes', 'Terraform', 'Prometheus', 'Grafana', 'Loki', 'Amazon RDS', 'RBAC'],
+      companyUrl: 'https://aiplanet.com/'
+    },
+    {
+      id: 'upwork',
+      company: 'UpWork',
+      role: 'DevOps Consultant',
+      period: 'Feb 2024 - Present',
+      location: 'Remote',
+      description: 'Providing DevOps consulting services specializing in Kubernetes, cloud-native solutions, and zero-trust infrastructure automation.',
+      achievements: [
+        'Deployed highly available PostgreSQL clusters using CloudNativePG operator on Kubernetes with automated backup and disaster recovery',
+        'Managed Amazon EKS clusters including node lifecycle management, service mesh configuration with mTLS enforcement, and zero-downtime deployments',
+        'Implemented GitOps practices using ArgoCD for declarative continuous deployment with complete audit trails',
+        'Configured pod eviction strategies and zero-trust network model for mission-critical applications'
+      ],
+      technologies: ['Kubernetes', 'Amazon EKS', 'ArgoCD', 'CloudNativePG', 'PostgreSQL', 'Helm', 'Terraform', 'mTLS'],
+      current: true,
+      companyUrl: 'https://www.upwork.com/freelancers/~013b3ac8496e5c175d?viewMode=1'
     }
   ];
 
@@ -101,7 +104,7 @@ const Experience: React.FC = () => {
               <span className="text-gradient">Professional Experience</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              My journey in DevOps and Platform Engineering, building scalable infrastructure and enabling development teams.
+              My journey in DevSecOps and Platform Engineering, building secure, scalable infrastructure and enabling development teams.
             </p>
           </motion.div>
 
@@ -153,7 +156,19 @@ const Experience: React.FC = () => {
                         <div>
                           <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
                             <Building className="w-5 h-5 text-primary" />
-                            {exp.company}
+                            {exp.companyUrl ? (
+                              <a
+                                href={exp.companyUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-primary transition-colors flex items-center gap-1"
+                              >
+                                {exp.company}
+                                <ExternalLink className="w-4 h-4 text-primary" />
+                              </a>
+                            ) : (
+                              exp.company
+                            )}
                           </h3>
                           <p className="text-primary font-semibold">{exp.role}</p>
                         </div>

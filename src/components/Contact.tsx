@@ -36,9 +36,16 @@ const Contact: React.FC = () => {
       color: 'text-red-500'
     },
     {
+      icon: Phone,
+      label: 'Phone',
+      value: '+91-8074728123',
+      href: 'tel:+918074728123',
+      color: 'text-green-500'
+    },
+    {
       icon: MapPin,
       label: 'Location',
-      value: 'Karnataka, India',
+      value: 'Surathkal, Karnataka, India',
       href: '#',
       color: 'text-blue-500'
     }
@@ -55,7 +62,7 @@ const Contact: React.FC = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: '/in/jyothi-ram',
+      value: '/in/jyothi-ram-7a4602197',
       href: 'https://www.linkedin.com/in/jyothi-ram-7a4602197/',
       color: 'text-blue-600'
     },

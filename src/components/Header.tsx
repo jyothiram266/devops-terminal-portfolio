@@ -19,8 +19,8 @@ const Header: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/jyothiram', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/jyothi-ram', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/jyothiram266', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/jyothi-ram-7a4602197/', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:jyothiram261@gmail.com', label: 'Email' }
   ];
 

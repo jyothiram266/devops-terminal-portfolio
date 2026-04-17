@@ -9,7 +9,9 @@ import {
   Shield, 
   Server, 
   Wrench,
-  CheckCircle
+  CheckCircle,
+  Cpu,
+  ExternalLink
 } from 'lucide-react';
 
 interface Skill {
@@ -26,53 +28,57 @@ const Skills: React.FC = () => {
   const skillCategories = [
     { id: 'all', label: 'All Skills', icon: Code },
     { id: 'languages', label: 'Languages', icon: Code },
-    { id: 'cloud', label: 'Cloud & AWS', icon: Cloud },
-    { id: 'devops', label: 'DevOps Tools', icon: GitBranch },
-    { id: 'databases', label: 'Databases', icon: Database },
-    { id: 'monitoring', label: 'Monitoring', icon: Monitor },
-    { id: 'security', label: 'Security', icon: Shield }
+    { id: 'devsecops', label: 'DevSecOps & CI/CD', icon: Shield },
+    { id: 'cloud', label: 'Cloud & Containers', icon: Cloud },
+    { id: 'iac', label: 'Infrastructure & IaC', icon: Server },
+    { id: 'security', label: 'Security & Monitoring', icon: Monitor },
+    { id: 'aiml', label: 'AI/ML Security', icon: Cpu }
   ];
 
   const skills: Skill[] = [
     // Languages
-    { name: 'Python', level: 90, category: 'languages', description: 'Automation, scripting, and backend development' },
-    { name: 'Golang', level: 85, category: 'languages', description: 'Microservices and cloud-native applications' },
-    { name: 'JavaScript', level: 80, category: 'languages', description: 'Full-stack web development and automation' },
-    { name: 'SQL', level: 85, category: 'languages', description: 'Database design and complex queries' },
-    { name: 'Bash/Shell', level: 90, category: 'languages', description: 'System administration and automation' },
+    { name: 'Python', level: 90, category: 'languages', description: 'Automation, scripting, and compliance checks' },
+    { name: 'Go', level: 85, category: 'languages', description: 'CLI tools, microservices, and cloud-native applications' },
+    { name: 'Bash/Shell Scripting', level: 92, category: 'languages', description: 'System administration and automation scripts' },
+    { name: 'JavaScript', level: 80, category: 'languages', description: 'Full-stack web development and tooling' },
+    { name: 'SQL (PostgreSQL)', level: 85, category: 'languages', description: 'Database design, complex queries, and migrations' },
+    { name: 'C/C++', level: 75, category: 'languages', description: 'Systems programming and performance-critical code' },
 
-    // Cloud & AWS
-    { name: 'AWS EKS', level: 90, category: 'cloud', description: 'Kubernetes on AWS with advanced configurations' },
-    { name: 'AWS EC2', level: 85, category: 'cloud', description: 'Compute instances and auto-scaling' },
-    { name: 'AWS RDS', level: 80, category: 'cloud', description: 'Managed database services and migrations' },
-    { name: 'AWS S3', level: 85, category: 'cloud', description: 'Object storage and static website hosting' },
-    { name: 'AWS VPC', level: 80, category: 'cloud', description: 'Network architecture and security groups' },
+    // DevSecOps & CI/CD
+    { name: 'GitHub Actions', level: 90, category: 'devsecops', description: 'CI/CD pipelines with security scanning and quality gates' },
+    { name: 'GitLab CI', level: 80, category: 'devsecops', description: 'Continuous integration and delivery pipelines' },
+    { name: 'Jenkins', level: 78, category: 'devsecops', description: 'Build automation and pipeline orchestration' },
+    { name: 'ArgoCD', level: 88, category: 'devsecops', description: 'GitOps continuous deployment with audit trails' },
+    { name: 'SonarQube', level: 85, category: 'devsecops', description: 'Static code analysis and quality gates' },
+    { name: 'Trivy', level: 88, category: 'devsecops', description: 'Container and dependency vulnerability scanning' },
+    { name: 'Snyk', level: 78, category: 'devsecops', description: 'Security scanning for open source dependencies' },
+    { name: 'OWASP ZAP', level: 75, category: 'devsecops', description: 'Dynamic application security testing' },
 
-    // DevOps Tools
-    { name: 'Kubernetes', level: 90, category: 'devops', description: 'Container orchestration and management' },
-    { name: 'Docker', level: 90, category: 'devops', description: 'Containerization and multi-stage builds' },
-    { name: 'Terraform', level: 85, category: 'devops', description: 'Infrastructure as Code and state management' },
-    { name: 'Helm', level: 85, category: 'devops', description: 'Kubernetes package manager and templating' },
-    { name: 'ArgoCD', level: 80, category: 'devops', description: 'GitOps continuous delivery' },
-    { name: 'GitHub Actions', level: 85, category: 'devops', description: 'CI/CD pipelines and automation' },
-    { name: 'Jenkins', level: 75, category: 'devops', description: 'Build automation and pipelines' },
-    { name: 'Ansible', level: 80, category: 'devops', description: 'Configuration management and automation' },
+    // Cloud & Container Orchestration
+    { name: 'AWS (EKS, EC2, RDS, S3)', level: 90, category: 'cloud', description: 'Production workloads with zero-trust policies' },
+    { name: 'GCP', level: 80, category: 'cloud', description: 'Google Cloud Platform services and infrastructure' },
+    { name: 'Kubernetes', level: 92, category: 'cloud', description: 'Container orchestration with security policies and RBAC' },
+    { name: 'Docker', level: 92, category: 'cloud', description: 'Multi-stage builds, containerization, and image scanning' },
+    { name: 'Helm', level: 88, category: 'cloud', description: 'Kubernetes package management with secure secret handling' },
+    { name: 'K3s', level: 85, category: 'cloud', description: 'Lightweight Kubernetes for edge and development' },
 
-    // Databases
-    { name: 'PostgreSQL', level: 85, category: 'databases', description: 'Advanced queries and performance tuning' },
-    { name: 'MongoDB', level: 75, category: 'databases', description: 'NoSQL database design and operations' },
-    { name: 'Redis', level: 70, category: 'databases', description: 'Caching and session management' },
+    // Infrastructure & Automation
+    { name: 'Terraform', level: 88, category: 'iac', description: 'Infrastructure as Code and automated state management' },
+    { name: 'Ansible', level: 82, category: 'iac', description: 'Configuration management and server automation' },
+    { name: 'CloudFormation', level: 78, category: 'iac', description: 'AWS-native infrastructure provisioning' },
+    { name: 'GitOps', level: 88, category: 'iac', description: 'Declarative infrastructure and application delivery' },
 
-    // Monitoring
-    { name: 'Prometheus', level: 85, category: 'monitoring', description: 'Metrics collection and alerting' },
-    { name: 'Grafana', level: 85, category: 'monitoring', description: 'Data visualization and dashboards' },
-    { name: 'Loki', level: 80, category: 'monitoring', description: 'Log aggregation and analysis' },
-    { name: 'AlertManager', level: 75, category: 'monitoring', description: 'Alert routing and notification' },
+    // Security & Monitoring
+    { name: 'Zero-Trust Architecture', level: 88, category: 'security', description: 'Network policies, RBAC, and mTLS enforcement' },
+    { name: 'Prometheus', level: 88, category: 'security', description: 'Metrics collection, alerting, and security-focused rules' },
+    { name: 'Grafana', level: 88, category: 'security', description: 'Dashboards, visualization, and anomaly detection' },
+    { name: 'Loki', level: 82, category: 'security', description: 'Log aggregation and security event analysis' },
+    { name: 'CloudWatch / ELK Stack', level: 78, category: 'security', description: 'Cloud monitoring and log management' },
 
-    // Security
-    { name: 'IAM', level: 80, category: 'security', description: 'Identity and access management' },
-    { name: 'Security Scanning', level: 75, category: 'security', description: 'Vulnerability assessment and remediation' },
-    { name: 'Network Security', level: 75, category: 'security', description: 'Firewall rules and network policies' }
+    // AI/ML Security
+    { name: 'LLM Platform Hardening', level: 80, category: 'aiml', description: 'Securing AI inference platforms and model endpoints' },
+    { name: 'Model Supply-Chain Scanning', level: 78, category: 'aiml', description: 'Integrity verification for ML model artifacts' },
+    { name: 'Container Isolation for AI', level: 82, category: 'aiml', description: 'Runtime isolation and resource limits for AI workloads' }
   ];
 
   const certifications = [
@@ -80,14 +86,22 @@ const Skills: React.FC = () => {
       name: 'AWS Certified Cloud Practitioner',
       issuer: 'Amazon Web Services',
       year: '2024',
-      verified: true
+      verified: true,
+      credentialUrl: 'https://www.credly.com/badges/95f41770-50f5-4b88-8ad5-54143ac11d6e/public_url'
     },
     {
-      name: 'KodeKloud Engineer',
-      issuer: 'KodeKloud',
+      name: 'Kubernetes Event-Driven Autoscaling (KEDA)',
+      issuer: 'The Linux Foundation',
       year: '2024',
-      score: '45,000 XP',
-      verified: true
+      verified: true,
+      credentialUrl: 'https://www.credly.com/badges/5ea033a6-d5a2-41ba-84f7-de41af00194a/public_url'
+    },
+    {
+      name: 'LIFT Scholarship 2025 Recipient',
+      issuer: 'The Linux Foundation',
+      year: '2025',
+      verified: true,
+      credentialUrl: 'https://www.linuxfoundation.org/about/lift-scholarships'
     }
   ];
 
@@ -138,7 +152,7 @@ const Skills: React.FC = () => {
               <span className="text-gradient">Technical Skills</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive overview of my technical expertise in DevOps, cloud computing, and software development.
+              A comprehensive overview of my technical expertise in DevSecOps, cloud computing, security automation, and infrastructure engineering.
             </p>
           </motion.div>
 
@@ -223,46 +237,47 @@ const Skills: React.FC = () => {
                           <h4 className="font-medium text-foreground text-sm">{cert.name}</h4>
                           <p className="text-xs text-muted-foreground">{cert.issuer}</p>
                           <p className="text-xs text-muted-foreground">{cert.year}</p>
-                          {cert.score && (
-                            <p className="text-xs text-primary">{cert.score}</p>
-                          )}
                         </div>
-                        {cert.verified && (
+                        {cert.verified && cert.credentialUrl ? (
+                          <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 hover:scale-110 transition-transform">
+                            <CheckCircle className="w-4 h-4 text-terminal-success" />
+                          </a>
+                        ) : cert.verified ? (
                           <CheckCircle className="w-4 h-4 text-terminal-success flex-shrink-0" />
-                        )}
+                        ) : null}
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Learning Progress */}
+              {/* System Administration */}
               <div className="terminal-window p-6">
                 <div className="terminal-header">
                   <div className="terminal-dot bg-red-500"></div>
                   <div className="terminal-dot bg-yellow-500"></div>
                   <div className="terminal-dot bg-green-500"></div>
-                  <span className="ml-4 text-sm text-muted-foreground">learning.log</span>
+                  <span className="ml-4 text-sm text-muted-foreground">sysadmin.log</span>
                 </div>
                 
                 <div className="mt-4 space-y-3">
-                  <h3 className="font-semibold text-foreground">Currently Learning</h3>
+                  <h3 className="font-semibold text-foreground">System Administration</h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                       <span className="text-terminal-warning">⚡</span>
-                      <span className="text-muted-foreground">Advanced Kubernetes Security</span>
+                      <span className="text-muted-foreground">Linux (Ubuntu, RHEL)</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-terminal-warning">⚡</span>
-                      <span className="text-muted-foreground">Service Mesh with Istio</span>
+                      <span className="text-muted-foreground">Security Hardening</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-terminal-warning">⚡</span>
-                      <span className="text-muted-foreground">GitOps with Flux</span>
+                      <span className="text-muted-foreground">Networking & Firewall Rules</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-terminal-warning">⚡</span>
-                      <span className="text-muted-foreground">Site Reliability Engineering</span>
+                      <span className="text-muted-foreground">System Performance Tuning</span>
                     </div>
                   </div>
                 </div>

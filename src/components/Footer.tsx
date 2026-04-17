@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/jyothiram266', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/jyothi-ram', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/jyothi-ram-7a4602197/', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:jyothiram261@gmail.com', label: 'Email' }
   ];
 
@@ -45,8 +45,8 @@ const Footer: React.FC = () => {
             </motion.div>
             
             <p className="text-muted-foreground mb-4 max-w-md">
-              Platform Engineer passionate about building scalable, resilient infrastructure 
-              that enables developers to ship faster and more reliably.
+              DevSecOps Engineer passionate about building secure cloud-native infrastructure 
+              with zero-trust CI/CD pipelines and container security automation.
             </p>
             
             <div className="terminal-window p-4 max-w-md">
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                 </p>
                 <p className="text-muted-foreground">
                   <span className="text-primary">$ </span>
-                  <span className="text-terminal-cyan">Focus: DevOps & Cloud Architecture</span>
+                  <span className="text-terminal-cyan">Focus: DevSecOps & Security Automation</span>
                 </p>
               </div>
             </div>

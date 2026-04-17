@@ -16,11 +16,11 @@ interface TerminalState {
 }
 
 const commands = {
-  whoami: () => "Jyothi Ram - Platform Engineer & DevOps Specialist\nCurrently pursuing BTech at NIT Karnataka\nSpecializing in Cloud-Native Architecture & Infrastructure Automation",
+  whoami: () => "Jyothi Ram - DevSecOps Engineer & Platform Specialist\nFinal-year BTech student at NIT Karnataka (2022–2026)\nSpecializing in Zero-Trust CI/CD, Container Security & Cloud-Native Infrastructure",
   
   ls: (arg?: string) => {
     if (arg === 'projects') {
-      return "Cloud-Native-ML-Platform/\nDevOpsified-GoLang-app/\nKubernetes-Monitoring-Stack/\nTerraform-AWS-Infrastructure/";
+      return "Secure-Cloud-Native-LLM-Platform/\nSecure-DevOps-Pipeline-GoLang/\nTerraform-Jenkins-AWS-Infrastructure/";
     }
     return "about.txt\nexperience.json\nprojects/\nskills.txt\nachievements.md\ncontact.info";
   },
@@ -28,24 +28,24 @@ const commands = {
   cat: (file?: string) => {
     switch (file) {
       case 'skills.txt':
-        return "=== TECHNICAL SKILLS ===\n\nLanguages: Python, C/C++, SQL, JavaScript, Golang\nCloud: AWS (EKS, RDS, EC2, S3)\nContainers: Docker, Kubernetes, Helm\nCI/CD: GitHub Actions, ArgoCD, Jenkins\nMonitoring: Prometheus, Grafana, Loki\nInfrastructure: Terraform, Ansible\nWeb: React, Express, Next.js\n\nCertifications:\n✓ AWS Certified Cloud Practitioner\n✓ KodeKloud Engineer (45,000 XP)";
+        return "=== TECHNICAL SKILLS ===\n\nLanguages: Python, Go, Bash/Shell, JavaScript, SQL (PostgreSQL), C/C++\nDevSecOps: GitHub Actions, GitLab CI, Jenkins, ArgoCD, SonarQube, Trivy, Snyk, OWASP ZAP\nCloud & Containers: AWS (EKS, EC2, RDS, S3), GCP, Kubernetes, Docker, Helm, K3s\nInfrastructure: Terraform, Ansible, CloudFormation, GitOps\nSecurity: Zero-Trust, RBAC, Network Policies, mTLS, Prometheus, Grafana, Loki, ELK Stack\nAI/ML Security: LLM platform hardening, model supply-chain scanning, container isolation\nSysAdmin: Linux (Ubuntu, RHEL), Security Hardening, Networking\n\nCertifications:\n✓ AWS Certified Cloud Practitioner\n✓ Linux Foundation - KEDA Certified\n✓ LIFT Scholarship 2025 Recipient";
       
       case 'about.txt':
-        return "=== ABOUT JYOTHI RAM ===\n\nPlatform Engineer passionate about building scalable, resilient infrastructure.\nCurrently pursuing BTech at National Institute of Technology Karnataka.\n\nSpecializations:\n• Cloud-Native Architecture\n• DevOps & CI/CD Automation\n• Infrastructure as Code\n• Container Orchestration\n• Monitoring & Observability\n\nPhilosophy: \"Infrastructure should be invisible, reliable, and enable developers to focus on building amazing products.\"";
+        return "=== ABOUT JYOTHI RAM ===\n\nDevSecOps Engineer passionate about building secure cloud-native infrastructure.\nFinal-year BTech at National Institute of Technology Karnataka.\n\nSpecializations:\n• Zero-Trust CI/CD Pipeline Architecture\n• Container Security Automation\n• Infrastructure Hardening (AWS & GCP)\n• AI/ML Platform Security\n• Monitoring & Anomaly Detection\n\nPhilosophy: \"Secure by default, automated everywhere, fail fast and learn faster\"";
       
       case 'contact.info':
-        return "=== CONTACT INFORMATION ===\n\nEmail: jyothiram261@gmail.com\nPhone: +91-8074728123\nLinkedIn: /in/jyothi-ram\nGitHub: /jyothiram\nHashnode: /jyothiram\nPortfolio: jyothiram.dev";
+        return "=== CONTACT INFORMATION ===\n\nEmail: jyothiram261@gmail.com\nPhone: +91-8074728123\nLinkedIn: /in/jyothi-ram-7a4602197\nGitHub: /jyothiram266\nHashnode: /jyothiram\nPortfolio: jyothiram.dev";
       
       default:
         return `cat: ${file}: No such file or directory`;
     }
   },
   
-  history: () => "=== CAREER TIMELINE ===\n\n[May 2025 - Present] FixplianceAI - Platform Engineer\n• Implemented Traefik reverse proxy (20% latency reduction)\n• Automated GitHub Release Notes generation\n• Orchestrated Docker Swarm deployments\n\n[Feb 2024 - Present] UpWork - FreeLancer\n• Deployed PostgreSQL clusters with CloudNativePG\n• Managed Kubernetes with Amazon EKS\n• Implemented CI/CD with ArgoCD\n\n[Aug 2024 - May 2025] AI PLANET - DevOps Engineer\n• Built GitHub Actions CI/CD (40% faster deployments)\n• Deployed applications on Amazon EKS\n• Implemented monitoring with Prometheus/Grafana/Loki\n• Managed Amazon RDS migrations",
+  history: () => "=== CAREER TIMELINE ===\n\n[May 2025 - Mar 2026] FixplianceAI - Platform Engineer\n• Engineered zero-trust CI/CD with SonarQube & Trivy\n• Migrated Docker Swarm to K3s (75% faster deployments)\n• Built Go/Bash CLI for one-click AWS/GCP provisioning\n• Established Prometheus/Grafana/Loki monitoring stack\n\n[Aug 2024 - May 2025] AI PLANET - DevOps Engineer\n• Built CI/CD pipelines (40% faster releases)\n• Deployed on Amazon EKS with zero-trust network policies\n• Implemented monitoring with security event dashboards\n• Executed zero-downtime RDS migrations\n\n[Feb 2024 - Present] UpWork - DevOps Consultant\n• Deployed HA PostgreSQL with CloudNativePG operator\n• Managed EKS clusters with mTLS & zero-trust model\n• Implemented GitOps with ArgoCD & audit trails",
   
   ping: (service?: string) => {
     if (service === 'social') {
-      return "PING social_networks...\n\n✓ LinkedIn: linkedin.com/in/jyothi-ram [REACHABLE]\n✓ GitHub: github.com/jyothiram [REACHABLE]\n✓ Hashnode: hashnode.com/@jyothiram [REACHABLE]\n✓ Email: jyothiram261@gmail.com [REACHABLE]\n\nAll social networks are operational and ready for collaboration!";
+      return "PING social_networks...\n\n✓ LinkedIn: linkedin.com/in/jyothi-ram-7a4602197 [REACHABLE]\n✓ GitHub: github.com/jyothiram266 [REACHABLE]\n✓ Hashnode: jyothiram.hashnode.dev [REACHABLE]\n✓ Email: jyothiram261@gmail.com [REACHABLE]\n\nAll social networks are operational and ready for collaboration!";
     }
     return `ping: ${service}: Host unreachable`;
   },
@@ -61,7 +61,7 @@ export const useTerminal = () => {
       {
         id: '0',
         command: '',
-        output: "Welcome to Jyothi Ram's DevOps Portfolio Terminal v1.0\nType 'help' to see available commands.",
+        output: "Welcome to Jyothi Ram's DevSecOps Portfolio Terminal v2.0\nType 'help' to see available commands.",
         timestamp: new Date()
       }
     ],

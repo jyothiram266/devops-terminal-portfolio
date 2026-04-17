@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, ExternalLink, Code, Cloud, Database, Monitor, X } from 'lucide-react';
+import { Github, ExternalLink, Code, Cloud, Database, Monitor, X, Shield } from 'lucide-react';
 
 interface Project {
   id: string;
@@ -22,55 +22,54 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
-      id: 'ml-platform',
-      title: 'Cloud-Native ML Platform Setup',
-      description: 'Scalable Language Model inference system with Kubernetes orchestration and automated scaling.',
-      longDescription: 'Built a comprehensive cloud-native machine learning platform that can scale Language Model inference workloads automatically. The platform includes custom Helm charts for deployment, persistent volume claims for model storage, horizontal pod autoscaling for traffic spikes, and comprehensive k6 performance testing. The infrastructure supports multiple model types and can handle thousands of concurrent requests with sub-second response times.',
-      technologies: ['Python', 'Ollama', 'AWS', 'Kubernetes', 'Docker', 'Helm', 'k6'],
+      id: 'secure-llm-platform',
+      title: 'Secure Cloud-Native LLM Platform',
+      description: 'Secure LLM inference platform with containerised Ollama models on Kubernetes, automated vulnerability scanning, and AI/ML-specific security.',
+      longDescription: 'Architected and deployed a secure LLM inference platform using containerised Ollama models on Kubernetes. Integrated automated vulnerability scanning (Trivy) and static code analysis into the CI/CD pipeline, addressing AI/ML-specific security considerations including model supply-chain integrity and runtime isolation. Implemented Infrastructure as Code using Helm charts with secure secret management, Persistent Volume Claims for data persistence, RBAC policies, and Horizontal Pod Autoscaling. Conducted performance and security testing using k6 load testing framework, optimised resource limits to prevent noisy-neighbour attacks, and implemented real-time monitoring dashboards.',
+      technologies: ['Python', 'Ollama', 'AWS', 'Kubernetes', 'Docker', 'Helm', 'Trivy', 'k6'],
       features: [
-        'Custom Helm charts for microservices deployment',
-        'Persistent Volume Claims for model storage',
-        'Horizontal Pod Autoscaler for dynamic scaling',
-        'k6 performance testing and load balancing',
-        'Multi-model support with version management',
-        'Real-time monitoring and alerting'
+        'Automated vulnerability scanning with Trivy in CI/CD pipeline',
+        'Model supply-chain integrity and runtime isolation',
+        'Helm charts with secure secret management and RBAC policies',
+        'Persistent Volume Claims and Horizontal Pod Autoscaling',
+        'k6 performance and security testing with resource limit optimization',
+        'Real-time monitoring dashboards for anomaly detection'
       ],
       githubUrl: 'https://github.com/jyothiram266/mlops-project',
       category: 'cloud',
       status: 'completed'
     },
     {
-      id: 'devopsified-golang',
-      title: 'DevOpsified-GoLang-app',
-      description: 'Complete CI/CD pipeline for Golang application with Docker, Kubernetes, and GitOps workflow.',
-      longDescription: 'A fully automated DevOps pipeline for a Golang web application featuring multi-stage Docker builds, Amazon EKS deployment, Nginx Ingress configuration, and ArgoCD GitOps workflow. The project demonstrates modern DevOps practices including infrastructure as code, automated testing, security scanning, and zero-downtime deployments.',
-      technologies: ['Golang', 'Docker', 'AWS EKS', 'Helm', 'ArgoCD', 'GitHub Actions', 'Nginx'],
+      id: 'secure-devops-go',
+      title: 'Secure DevOps Pipeline for Go Application',
+      description: 'Secure build pipeline with Docker multi-stage builds, container scanning with Trivy, AWS EKS deployment with zero-trust policies and GitOps.',
+      longDescription: 'Engineered a secure build process using Docker multi-stage builds to minimise attack surface. Implemented container image scanning with Trivy and enforced security best practices throughout the SDLC. Deployed production-ready application on AWS EKS with Kubernetes security policies, zero-trust network policies, and RBAC configuration, utilising Nginx Ingress Controller with TLS termination for encrypted traffic routing. Automated end-to-end deployment workflow using GitOps methodology with ArgoCD for continuous deployment and GitHub Actions for CI pipeline with integrated unit testing, security scanning, and quality gates.',
+      technologies: ['Go', 'Docker', 'AWS EKS', 'Helm', 'ArgoCD', 'GitHub Actions', 'Nginx', 'Trivy'],
       features: [
-        'Multi-stage Docker builds for optimization',
-        'Amazon EKS cluster with auto-scaling',
-        'Nginx Ingress Controller with SSL/TLS',
-        'ArgoCD GitOps deployment workflow',
-        'Automated GitHub Actions CI/CD',
-        'Security scanning and vulnerability assessment',
-        'Blue-green deployment strategy'
+        'Docker multi-stage builds to minimise attack surface',
+        'Container image scanning with Trivy',
+        'AWS EKS with zero-trust network policies and RBAC',
+        'Nginx Ingress Controller with TLS termination',
+        'ArgoCD GitOps continuous deployment',
+        'GitHub Actions CI with security scanning and quality gates'
       ],
-      githubUrl: 'https://github.com/jyothiram266/devops-projects/tree/master/go-web-app',
+      githubUrl: 'https://github.com/jyothiram266/go-web-app',
       category: 'devops',
       status: 'completed'
     },
     {
-      id: 'terraform-aws',
+      id: 'terraform-jenkins',
       title: 'Terraform Jenkins AWS Infrastructure',
-      description: 'Infrastructure as Code templates for AWS with best practices and security configurations.',
-      longDescription: 'Production-ready Terraform modules for AWS infrastructure provisioning. Includes VPC setup, EKS clusters, RDS databases, security groups, and IAM roles. All modules follow AWS Well-Architected Framework principles and include comprehensive documentation, testing, and validation.',
-      technologies: ['Terraform', 'AWS', 'VPC', 'EKS', 'RDS', 'IAM'],
+      description: 'Infrastructure as Code templates for AWS with Jenkins, Kubernetes deployment, security configurations, and best practices.',
+      longDescription: 'Production-ready Terraform modules for AWS infrastructure provisioning with Jenkins integration. Includes VPC setup, EKS clusters, RDS databases, security groups, and IAM roles. All modules follow AWS Well-Architected Framework principles and include comprehensive documentation, testing, and validation. Supports multi-environment deployment with security best practices and cost optimization.',
+      technologies: ['Terraform', 'AWS', 'Jenkins', 'Kubernetes', 'VPC', 'EKS', 'IAM'],
       features: [
-        'Modular jenkins and Terraform configuration',
+        'Modular Jenkins and Terraform configuration',
         'AWS Well-Architected compliance',
-        'Multi-environment support',
-        'Security best practices',
-        'Cost optimization strategies',
-        'Automated testing and validation'
+        'Multi-environment support with security best practices',
+        'VPC, EKS, RDS provisioning automation',
+        'IAM roles and security group configuration',
+        'Cost optimization strategies and automated testing'
       ],
       githubUrl: 'https://github.com/jyothiram266/devops-projects/tree/master/Deploy-to-Kubernetes-Using-Jenkins',
       category: 'cloud',
@@ -81,7 +80,7 @@ const Projects: React.FC = () => {
   const categories = [
     { id: 'all', label: 'All Projects', icon: Code },
     { id: 'cloud', label: 'Cloud', icon: Cloud },
-    { id: 'devops', label: 'DevOps', icon: Github },
+    { id: 'devops', label: 'DevOps', icon: Shield },
     { id: 'monitoring', label: 'Monitoring', icon: Monitor },
     { id: 'automation', label: 'Automation', icon: Database }
   ];
@@ -143,7 +142,7 @@ const Projects: React.FC = () => {
               <span className="text-gradient">Featured Projects</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A showcase of DevOps and cloud engineering projects that demonstrate infrastructure automation, scalability, and modern best practices.
+              Secure cloud-native projects showcasing DevSecOps pipelines, infrastructure automation, container security, and AI/ML platform hardening.
             </p>
           </motion.div>
 
