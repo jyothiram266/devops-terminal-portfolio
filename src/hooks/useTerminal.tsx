@@ -34,7 +34,7 @@ const commands = {
         return "=== ABOUT JYOTHI RAM ===\n\nDevSecOps Engineer passionate about building secure cloud-native infrastructure.\nFinal-year BTech at National Institute of Technology Karnataka.\n\nSpecializations:\n• Zero-Trust CI/CD Pipeline Architecture\n• Container Security Automation\n• Infrastructure Hardening (AWS & GCP)\n• AI/ML Platform Security\n• Monitoring & Anomaly Detection\n\nPhilosophy: \"Secure by default, automated everywhere, fail fast and learn faster\"";
       
       case 'contact.info':
-        return "=== CONTACT INFORMATION ===\n\nEmail: jyothiram261@gmail.com\nPhone: +91-8074728123\nLinkedIn: /in/jyothi-ram-7a4602197\nGitHub: /jyothiram266\nHashnode: /jyothiram\nPortfolio: jyothiram.dev";
+        return "=== CONTACT INFORMATION ===\n\nEmail: jyothiram261@gmail.com\nLinkedIn: /in/jyothi-ram-7a4602197\nGitHub: /jyothiram266\nHashnode: /jyothiram\nPortfolio: jyothiram.dev";
       
       default:
         return `cat: ${file}: No such file or directory`;

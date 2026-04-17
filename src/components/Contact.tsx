@@ -35,13 +35,7 @@ const Contact: React.FC = () => {
       href: 'mailto:jyothiram261@gmail.com',
       color: 'text-red-500'
     },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+91-8074728123',
-      href: 'tel:+918074728123',
-      color: 'text-green-500'
-    },
+
     {
       icon: MapPin,
       label: 'Location',
